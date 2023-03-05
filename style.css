@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', cursive;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    
+  }
+  
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    /* height: 4rem; */
+    z-index: 10000;
+    
+}
+
+.bg-body-tertiary{
+    background-color: #101820 !important;
+
+}
+.collapse .navbar-nav .nav-link{
+    color: aliceblue;
+    
+}
+#tagLine{
+position: relative;
+top: 4rem;
+}
+
+
+.courses{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcec63;
+}
+.mb-3{
+    width: 70%;
+}
+
+#timetable{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #101820;
+}
+#ttable{
+    position: relative;
+    top: .8rem;
+}
+
+.searchButton{
+    width: 70%;
+}
+
+.row1{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row2{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row3{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row4{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+
+.row5{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row6{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row7{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row8{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.row9{
+
+    width: 50rem;
+    height: 2rem;
+    border: .1rem solid #fff;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.col11{
+    width: 8rem;
+    height: 2rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col12{
+    width: 26rem;
+    height: 2rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col13{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col14{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col21{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col22{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col23{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col24{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col31{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col32{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col33{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col34{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col41{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col42{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col43{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col44{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col51{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col52{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col53{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col54{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col71{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col72{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col73{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col74{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col61{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col62{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col63{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col64{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col81{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col82{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col83{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col84{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.col91{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col92{
+    width: 26rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col93{
+    width: 8rem;
+    height: 1.8rem;
+    border-right: .1rem solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col94{
+    width: 8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tt_logo{
+    width: 2.5rem;
+}
+
+#exampleFormControlInput1{
+    border: .2rem solid #101820;
+    border-radius: 10px;
+}
+
+
+
+.form-inline{
+    display: flex;
+    
+}
+
+#navbarNavAltMarkup{
+    align-content: end;
+}
+.navbar-toggler{
+    background-color: #fff;
+}
+h3{
+    text-align: center;
+    margin-bottom: 1rem;
+    
+}
+
+
+@media(max-width:1600px){
+
+    .navbar{
+        height: 3rem;
+    }
+}
+
+@media(max-width:1200px){
+    html{
+        font-size: 85%;
+    }
+
+}
+
+@media(max-width:992px){
+    html{
+        font-size: 75%;
+    }
+    .navbar{
+        height: auto;
+    }
+
+}
+
+@media(max-width:769px){
+    html{
+        font-size: 65%;
+    }
+}
+
+@media(max-width:663px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:555px){
+    html{
+        font-size: 45%;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 40%;
+    }
+}
+@media(max-width:404px){
+    html{
+        font-size: 32%;
+    }
+}
+@media(max-width:380px){
+    html{
+        font-size: 28%;
+    }
+}
+
+
+

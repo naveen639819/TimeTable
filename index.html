@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Time Table</title>
+    <link rel="icon" href="logoo.png">
+
+</head>
+
+<body>
+    <div class="courses" id="home">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="time.gif" alt="gif" id="tt_logo"> </a>
+                <div id="navv">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link" href="#timetable">My TimeTable</a>
+                        <a class="nav-link" href="#contactme">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">
+                <h2>Enter Your All Courses' Code Here :</h2>
+            </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"
+                placeholder="e.g. : MTLXXX MTLXXX MTLXXX ...,  (Please put a space between every two courses)">
+        </div>
+        <a href="#timetable"><button type="submit" class="btn btn-danger searchButton" onclick="courseList()" style="white-space: nowrap; width: 9rem;"> Find Time Table </button></a>
+        <h6 id="tagLine">Say Goodbye to Boring Work and Hello to Productivity - Let Us Save Your Time!</h6>
+    </div>
+    <div id="timetable"  >
+        
+        <div id="ttable">
+        <h3 style="color: aliceblue; z-index: 3000;">My  Time Table <i class="fa-solid fa-pencil"></i></h3>
+        
+        <div class="row1">
+            <div class="col11" id="col11">
+                <h6>Date</h6>
+            </div>
+            <div class="col12">
+                <h6>Course Name</h6>
+            </div>
+            <div class="col13">
+                <h6>Room No.</h6>
+            </div>
+            <div class="col14">
+                <h6>Timing</h6>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="col21" id="col21"></div>
+            <div class="col22" id="col22"></div>
+            <div class="col23" id="col23"></div>
+            <div class="col24" id="col24"></div>
+        </div>
+        <div class="row3">
+            <div class="col31" id="col31"></div>
+            <div class="col32" id="col32"></div>
+            <div class="col33" id="col33"></div>
+            <div class="col34" id="col34"></div>
+        </div>
+        <div class="row4">
+            <div class="col41" id="col41"></div>
+            <div class="col42" id="col42"></div>
+            <div class="col43" id="col43"></div>
+            <div class="col44" id="col44"></div>
+        </div>
+        <div class="row5">
+            <div class="col51" id="col51"></div>
+            <div class="col52" id="col52"></div>
+            <div class="col53" id="col53"></div>
+            <div class="col54" id="col54"></div>
+        </div>
+        <div class="row6">
+            <div class="col61" id="col61"></div>
+            <div class="col62" id="col62"></div>
+            <div class="col63" id="col63"></div>
+            <div class="col64" id="col64"></div>
+        </div>
+        <div class="row7">
+            <div class="col71" id="col71"></div>
+            <div class="col72" id="col72"></div>
+            <div class="col73" id="col73"></div>
+            <div class="col74" id="col74"></div>
+        </div>
+        <div class="row8">
+            <div class="col81" id="col81"></div>
+            <div class="col82" id="col82"></div>
+            <div class="col83" id="col83"></div>
+            <div class="col84" id="col84"></div>
+        </div>
+        <div class="row9">
+            <div class="col91" id="col91"></div>
+            <div class="col92" id="col92"></div>
+            <div class="col93" id="col93"></div>
+            <div class="col94" id = "col94"></div>
+        </div>
+    </div>
+        <div class="notFound" id="notFound">
+
+        </div>
+        <button onclick="downloadPDF()" class="btn btn-danger mt-3 mb-1">Download PDF</button>
+        <form class="form-inline formss">
+            <div class="form-group mx-sm-3 mb-2 mt-2">
+              <input type="text" class="form-control" id="inputPassword2" placeholder="Enter Hostel Name">
+            </div>
+            <button type="submit" class="btn btn-success mb-2" id="hardcopy">Get Free Hardcopy</button>
+          </form>
+    </div>
+
+
+    <!-- Footer -->
+<footer class="bg-dark text-center text-white" id="contactme">
+    <!-- Grid container -->
+    <div class="container p-1">
+      <!-- Section: Social media -->
+      <section class="mb-1">
+                <!-- Personal website -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://naveen639819.github.io/PersonalPortfolio.github.io/" role="button"
+                ><i class="fa-solid fa-globe"></i></a>
+        
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="naveenmahor85@gmal.com" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/1.naveen_/?igshid=ZDdkNTZiNTM%3D" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/naveen-361a4825a/" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+      </section>
+
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+         2023 : Copyright © Naveen
+      </div>
+    
+ 
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script>
+        function downloadPDF() {
+  // Create a new jsPDF instance
+  var doc = new jsPDF();
+  
+  // Get the HTML element you want to download as a PDF
+  var element = document.getElementById("ttable");
+  
+  // Use html2canvas to convert the element to a canvas
+  html2canvas(element).then(function(canvas) {
+    // Add the canvas to the PDF document
+    doc.addImage(canvas, "JPEG", 0, 0, doc.internal.pageSize.width, element.offsetHeight * doc.internal.pageSize.width / element.offsetWidth);
+    
+    // Save the PDF document
+    doc.save("myTimeTable.pdf");
+  });
+}
+
+let hardcopyButton = document.getElementById("hardcopy");
+let hostelName = document.getElementById("inputPassword2");
+let tagLine = document.getElementById("tagLine");
+hardcopyButton.addEventListener("click",function(){
+    if(hostelName.value === ""){
+        alert("Enter hostel name.")
+    }
+    else{
+    alert("Sorry this service isn't available for your hostel.")
+    }
+})
+
+
+
+        let col_21 = document.getElementById("col21")
+        let col_22 = document.getElementById("col22")
+        let col_23 = document.getElementById("col23")
+        let col_24 = document.getElementById("col24")
+        let col_31 = document.getElementById("col31")
+        let col_32 = document.getElementById("col32")
+        let col_33 = document.getElementById("col33")
+        let col_34 = document.getElementById("col34")
+        let col_41 = document.getElementById("col41")
+        let col_42 = document.getElementById("col42")
+        let col_43 = document.getElementById("col43")
+        let col_44 = document.getElementById("col44")
+        let col_51 = document.getElementById("col51")
+        let col_52 = document.getElementById("col52")
+        let col_53 = document.getElementById("col53")
+        let col_54 = document.getElementById("col54")
+        let col_61 = document.getElementById("col61")
+        let col_62 = document.getElementById("col62")
+        let col_63 = document.getElementById("col63")
+        let col_64 = document.getElementById("col64")
+        let col_71 = document.getElementById("col71")
+        let col_72 = document.getElementById("col72")
+        let col_73 = document.getElementById("col73")
+        let col_74 = document.getElementById("col74")
+        let col_81 = document.getElementById("col81")
+        let col_82 = document.getElementById("col82")
+        let col_83 = document.getElementById("col83")
+        let col_84 = document.getElementById("col84")
+        let col_91 = document.getElementById("col91")
+        let col_92 = document.getElementById("col92")
+        let col_93 = document.getElementById("col93")
+        let col_94 = document.getElementById("col94")
+        let notFound = document.getElementById("notFound")
+        let [MTL710, MTL720, MTL730,MTL740,MTL750,MTL760,MTL770,MTL780,MTL790] = [
+            {
+                date: "20/03/2023",
+                name: "Computational algorithm its application",
+                room:"LH310",
+                timing:"2:00pm"
+            },
+            {
+                date: "21/03/2023",
+                name: "Stochastic process its application2",
+                room:"LH3210",
+                timing:"23:00pm"
+            }, {
+                date: "23/03/2023",
+                name: "C",
+                room:"LH3",
+                timing:"12:03"
+            },
+            {
+                date: "24/03/2023",
+                name: "E",
+                room:"LH4",
+                timing:"12:04"
+            },{
+                date: "25/03/2023",
+                name: "F",
+                room:"LH4",
+                timing:"12:05"
+            },
+            {
+                date: "26/03/2023",
+                name: "G",
+                room:"LH5",
+                timing:"12:06"
+            },
+            {
+                date: "27/03/2023",
+                name: "F",
+                room:"LH5",
+                timing:"12:05"
+            },{
+                date: "28/03/2023",
+                name: "G",
+                room:"LH5",
+                timing:"12:06"
+            },
+            {
+                date: "29/03/2023",
+                name: "H",
+                room:"LH6",
+                timing:"12:07"
+            }
+        ]
+
+        function courseList() {
+            tagLine.innerText = "Please reload website if you are going to search time table again!"
+            tagLine.style.color = "red";
+            tagLine.style.fontSize = "1.2rem";
+            var input = document.getElementById("exampleFormControlInput1").value;
+            var item = input.split(" ");
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[0])) {
+                let [resultElement_1] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[0]);
+                col_21.innerText = eval('(' + resultElement_1 + ')').date;
+                col_22.innerText = eval('(' + resultElement_1 + ')').name;
+                col_23.innerText = eval('(' + resultElement_1 + ')').room;
+                col_24.innerText = eval('(' + resultElement_1 + ')').timing;
+            } else {
+
+                // col_22.style = "color:red;";
+                col_22.innerText = `${item[0]} not found!`
+                col_22.style.color = "red";
+                if(!item[0]){
+                    col_22.innerText = "";
+                }
+
+            }
+
+
+
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[1])) {
+                let [resultElement_2] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[1]);
+                col_31.innerText = eval('(' + resultElement_2 + ')').date;
+                col_32.innerText = eval('(' + resultElement_2 + ')').name;
+                col_33.innerText = eval('(' + resultElement_2 + ')').room;
+                col_34.innerText = eval('(' + resultElement_2 + ')').timing;
+            } else {
+                col_32.innerText = `${item[1]} not found!`
+                col_32.style.color = "red";
+                if(!item[1]){
+                    col_32.innerText = "";
+                }
+            }
+
+
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[2])) {
+                let [resultElement_3] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[2]);
+                col_41.innerText = eval('(' + resultElement_3 + ')').date;
+                col_42.innerText = eval('(' + resultElement_3 + ')').name;
+                col_43.innerText = eval('(' + resultElement_3 + ')').room;
+                col_44.innerText = eval('(' + resultElement_3 + ')').timing;
+            } else {
+                col_42.innerText = `${item[2]} not found!`
+                col_42.style.color = "red";
+                if(!item[2]){
+                    col_42.innerText = "";
+                }
+            }
+
+
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[3])) {
+                let [resultElement_4] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[3]);
+                col_51.innerText = eval('(' + resultElement_4 + ')').date;
+                col_52.innerText = eval('(' + resultElement_4 + ')').name;
+                col_53.innerText = eval('(' + resultElement_4 + ')').room;
+                col_54.innerText = eval('(' + resultElement_4 + ')').timing;
+            } else {
+                col_52.innerText = `${item[3]} not found!`
+                col_52.style.color = "red";
+                if(!item[3]){
+                    col_52.innerText = "";
+                }
+            }
+
+
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[4])) {
+                let [resultElement_5] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[4]);
+                col_61.innerText = eval('(' + resultElement_5 + ')').date;
+                col_62.innerText = eval('(' + resultElement_5 + ')').name;
+                col_63.innerText = eval('(' + resultElement_5 + ')').room;
+                col_64.innerText = eval('(' + resultElement_5 + ')').timing;
+            } else {
+                col_62.innerText = `${item[4]} not found!`
+                col_62.style.color = "red";
+                if(!item[4]){
+                    col_62.innerText = "";
+                }
+            }
+
+
+
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[5])) {
+                let [resultElement_6] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[5]);
+                col_71.innerText = eval('(' + resultElement_6 + ')').date;
+                col_72.innerText = eval('(' + resultElement_6 + ')').name;
+                col_73.innerText = eval('(' + resultElement_6 + ')').room;
+                col_74.innerText = eval('(' + resultElement_6 + ')').timing;
+            } else {
+                col_72.innerText = `${item[5]} not found!`
+                col_72.style.color = "red";
+                if(!item[5]){
+                    col_72.innerText = "";
+                }
+            }
+
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[6])) {
+                let [resultElement_7] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[6]);
+                col_81.innerText = eval('(' + resultElement_7 + ')').date;
+                col_82.innerText = eval('(' + resultElement_7 + ')').name;
+                col_83.innerText = eval('(' + resultElement_7 + ')').room;
+                col_84.innerText = eval('(' + resultElement_7 + ')').timing;
+            } else {
+                col_82.innerText = `${item[6]} not found!`
+                col_82.style.color = "red";
+                if(!item[6]){
+                    col_82.innerText = "";
+                }
+            }
+
+
+            if (['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].includes(item[7])) {
+                let [resultElement_8] = ['MTL710', 'MTL720', 'MTL730','MTL740', 'MTL750', 'MTL760','MTL770', 'MTL780', 'MTL790'].filter(element => element === item[7]);
+                col_91.innerText = eval('(' + resultElement_8 + ')').date;
+                col_92.innerText = eval('(' + resultElement_8 + ')').name;
+                col_93.innerText = eval('(' + resultElement_8 + ')').room;
+                col_94.innerText = eval('(' + resultElement_8 + ')').timing;
+            } else {
+                col_92.innerText = `${item[7]} not found!`
+                col_92.style.color = "red";
+                if(!item[7]){
+                    col_92.innerText = "";
+                }
+            }
+
+
+            // col_31.innerText = item[1];
+            // col_41.innerText = item[2];
+            // col_51.innerText = item[3];
+            // col_61.innerText = item[4];
+            // col_71.innerText = item[6];
+            // col_81.innerText = item[7];
+            // col_91.innerText = item[8];
+        }
+    </script>
+</body>
+
+</html>
